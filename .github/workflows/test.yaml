@@ -21,3 +21,7 @@ jobs:
         run: |
           make build
           ./kubesec help
+      - name: goreleaser snapshot
+        run: |
+          go install github.com/goreleaser/goreleaser@latest
+          goreleaser release --snapshot --clean
