@@ -4,12 +4,14 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	log "github.com/sirupsen/logrus"
-	awskms "github.com/shyiko/kubesec/aws/kms"
-	"github.com/shyiko/kubesec/crypto/aes"
-	googlecloudkms "github.com/shyiko/kubesec/gcp/kms"
-	"github.com/shyiko/kubesec/gpg"
 	"strings"
+
+	awskms "kubesec/aws/kms"
+	"kubesec/crypto/aes"
+	googlecloudkms "kubesec/gcp/kms"
+	"kubesec/gpg"
+
+	log "github.com/sirupsen/logrus"
 )
 
 func Decrypt(resource []byte) ([]byte, *EncryptionContext, error) {

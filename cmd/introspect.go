@@ -3,8 +3,9 @@ package cmd
 import (
 	"errors"
 	"fmt"
-	"github.com/shyiko/kubesec/gpg"
 	"strings"
+
+	"kubesec/gpg"
 )
 
 func Introspect(resource []byte) ([]byte, error) {

@@ -6,14 +6,16 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	awskms "github.com/shyiko/kubesec/aws/kms"
-	"github.com/shyiko/kubesec/crypto/aes"
-	googlecloudkms "github.com/shyiko/kubesec/gcp/kms"
-	"github.com/shyiko/kubesec/gpg"
-	"gopkg.in/yaml.v2"
 	"regexp"
 	"sort"
 	"strings"
+
+	awskms "kubesec/aws/kms"
+	"kubesec/crypto/aes"
+	googlecloudkms "kubesec/gcp/kms"
+	"kubesec/gpg"
+
+	"gopkg.in/yaml.v2"
 )
 
 // "value"s are padded to a block size to avoid leaking length information
