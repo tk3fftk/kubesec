@@ -25,6 +25,8 @@ test-integration:
 	go test -v ./...
 
 test-coverage:
+	go vet ./...
+	(! gofmt -s -d . | grep '^')
 	go test -v ./... -coverprofile=./coverage.profile -cover
 	go tool cover -html=coverage.profile -o coverage.html
 	rm -f coverage.profile
