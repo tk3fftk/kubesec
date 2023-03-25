@@ -5,19 +5,21 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	log "github.com/sirupsen/logrus"
-	"github.com/shyiko/kubesec/cli"
-	kubesec "github.com/shyiko/kubesec/cmd"
-	"github.com/shyiko/kubesec/gpg"
-	"github.com/spf13/cobra"
-	"github.com/spf13/pflag"
-	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"regexp"
 	"strings"
 	"text/template"
+
+	"kubesec/cli"
+	kubesec "kubesec/cmd"
+	"kubesec/gpg"
+
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
+	"github.com/spf13/pflag"
+	"gopkg.in/yaml.v2"
 )
 
 var version string

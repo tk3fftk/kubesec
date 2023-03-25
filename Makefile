@@ -1,14 +1,9 @@
 SHELL := /bin/bash -o pipefail
-VERSION := $(shell git describe --tags --abbrev=0)
+VERSION := $(shell git describe --tags --abbrev=0 || echo "dev")
 
 fetch:
-	go get \
-	github.com/mitchellh/gox \
-	github.com/Masterminds/glide \
-	github.com/modocache/gover \
-	github.com/aktau/github-release && \
-	glide install
-
+	go mod download
+	go mod tidy
 clean:
 	rm -f ./kubesec
 	rm -rf ./build

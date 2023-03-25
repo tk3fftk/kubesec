@@ -1,12 +1,13 @@
 package cmd
 
 import (
-	"github.com/shyiko/kubesec/gpg"
 	"os"
 	"reflect"
 	"regexp"
 	"strings"
 	"testing"
+
+	"kubesec/gpg"
 )
 
 func TestEncryptDecrypt(t *testing.T) {

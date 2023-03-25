@@ -3,16 +3,13 @@ package cli
 import (
 	"flag"
 	"fmt"
-	"github.com/posener/complete"
 	"io"
 	"os"
 	"path/filepath"
 	"strings"
-)
 
-func init() {
-	complete.LastArgBreaks = `"'@><=;|&(:`
-}
+	"github.com/posener/complete"
+)
 
 type Completion struct{}
 
