@@ -1,5 +1,5 @@
 jabba
-coverage.html
+coverage.*
 release
 vendor
 kubesec

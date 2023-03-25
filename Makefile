@@ -20,16 +20,22 @@ test-integration:
 	make .test
 
 .test:
-	go vet `go list ./... | grep -v /vendor/`
-	SRC=`find . -type f -name '*.go' -not -path "./vendor/*" -not -path "./.tmp/*"` && \
-		gofmt -l -s $$SRC | read && gofmt -l -s -d $$SRC && exit 1 || true
-	go test -v `go list ./... | grep -v /vendor/` | grep -v "=== RUN"
+	go vet ./...
+	(! gofmt -s -d . | grep '^')
+	go test -v ./...
 
 test-coverage:
-	go list ./... | grep -v /vendor/ | xargs -L1 -I{} sh -c 'go test -coverprofile `basename {}`.coverprofile {}' && \
-	gover && \
-	go tool cover -html=gover.coverprofile -o coverage.html && \
-	rm -f *.coverprofile
+	go vet ./...
+	(! gofmt -s -d . | grep '^')
+	go test -v ./... -coverprofile=./coverage.profile -cover
+	go tool cover -html=coverage.profile -o coverage.html
+	rm -f coverage.profile
+
+import-gpgkeys-for-test:
+	gpg2 --import .ci/jean-luc.picard.pubkey
+	gpg2 --allow-secret-key-import --import .ci/jean-luc.picard.seckey
+	gpg2 --keyserver pgp.mit.edu --recv-keys 160A7A9CF46221A56B06AD64461A804F2609FD89 72ECF46A56B4AD39C907BBB71646B01B86E50310 \
+	|| gpg2 --keyserver keyserver.ubuntu.com --recv-keys 160A7A9CF46221A56B06AD64461A804F2609FD89 72ECF46A56B4AD39C907BBB71646B01B86E50310
 
 build:
 	go build -ldflags "-X main.version=${VERSION}"
