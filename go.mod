@@ -8,7 +8,7 @@ require (
 	github.com/sirupsen/logrus v1.0.3
 	github.com/spf13/cobra v0.0.0-20170731170427-b26b538f6930
 	github.com/spf13/pflag v1.0.0
-	golang.org/x/net v0.0.0-20190311183353-d8887717615a
+	golang.org/x/net v0.7.0
 	golang.org/x/oauth2 v0.0.0-20170412232759-a6bd8cefa181
 	google.golang.org/api v0.0.0-20170508220804-e3824ed33c72
 	gopkg.in/yaml.v2 v2.2.2
@@ -25,7 +25,7 @@ require (
 	github.com/smartystreets/goconvey v1.7.2 // indirect
 	github.com/stretchr/testify v1.8.2 // indirect
 	golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2 // indirect
-	golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a // indirect
+	golang.org/x/sys v0.5.0 // indirect
 	google.golang.org/appengine v0.0.0-20160301025000-12d5545dc1cf // indirect
 	gopkg.in/airbrake/gobrake.v2 v2.0.9 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
