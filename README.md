@@ -1,4 +1,9 @@
-# kubesec ![Latest Version](https://img.shields.io/badge/latest-0.9.2-blue.svg) [![Build Status](https://travis-ci.org/shyiko/kubesec.svg?branch=master)](https://travis-ci.org/shyiko/kubesec)
+# kubesec ![Latest Version](https://img.shields.io/badge/latest-0.9.2-blue.svg) ![test  workflow](https://github.com/tk3fftk/kubesec/actions/workflows/test.yaml/badge.svg) ![release workflow](https://github.com/tk3fftk/kubesec/actions/workflows/goreleaser.yaml/badge.svg)
+
+This repositry is forked from [shyiko/kubesec](https://github.com/shyiko/kubesec).  
+The purpose is maintenance update like security, Go version, Arm based Mac support.
+
+---
 
 Secure secret management for [Kubernetes](https://kubernetes.io/) (with [gpg](https://gnupg.org/), 
 [Google Cloud KMS](https://cloud.google.com/kms/) and [AWS KMS](https://aws.amazon.com/kms/) backends).
