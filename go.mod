@@ -3,7 +3,7 @@ module kubesec
 go 1.20
 
 require (
-	github.com/aws/aws-sdk-go v1.6.10
+	github.com/aws/aws-sdk-go v1.34.0
 	github.com/posener/complete v1.2.3
 	github.com/sirupsen/logrus v1.0.3
 	github.com/spf13/cobra v0.0.0-20170731170427-b26b538f6930
@@ -16,13 +16,11 @@ require (
 
 require (
 	cloud.google.com/go v0.1.1-0.20160913182117-3b1ae45394a2 // indirect
-	github.com/go-ini/ini v0.0.0-20151119163333-2e44421e256d // indirect
 	github.com/golang/protobuf v0.0.0-20161109072736-4bd1920723d7 // indirect
 	github.com/hashicorp/errwrap v1.0.0 // indirect
 	github.com/hashicorp/go-multierror v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
-	github.com/jmespath/go-jmespath v0.0.0-20151117175822-3433f3ea46d9 // indirect
-	github.com/smartystreets/goconvey v1.7.2 // indirect
+	github.com/jmespath/go-jmespath v0.3.0 // indirect
 	github.com/stretchr/testify v1.8.2 // indirect
 	golang.org/x/crypto v0.1.0 // indirect
 	golang.org/x/sys v0.5.0 // indirect
